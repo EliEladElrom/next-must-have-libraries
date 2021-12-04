@@ -1,0 +1,16 @@
+EE: Publish & verify checklist:
+==============================
+Publish
+2. Update 'package.json' version number
+3. yarn isready
+4. git add . && git commit -m ''
+5. git push
+6. npm publish (ensure $npm adduser $npm login - on SSH sudo)
+
+Verify:
+5. Check Github Actions & badges
+open https://github.com/EliEladElrom/next-must-have-libraries
+6. Verify version on npm:
+npm info next-must-have-libraries version
+
+* Note - github action is pulling one build behind from npm so a failed push needs to be re-pushed.
