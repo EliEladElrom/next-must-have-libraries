@@ -4,7 +4,9 @@ exports[`renders homepage unchanged 1`] = `
 <div
   className="container"
 >
-  <main>
+  <main
+    className="main"
+  >
     <h1
       className="title"
     >
@@ -19,8 +21,10 @@ exports[`renders homepage unchanged 1`] = `
       className="description"
     >
       Get started by editing 
-      <code>
-        pages/index.js
+      <code
+        className="code"
+      >
+        pages/index.tsx
       </code>
     </p>
     <div
@@ -30,9 +34,9 @@ exports[`renders homepage unchanged 1`] = `
         className="card"
         href="https://nextjs.org/docs"
       >
-        <h3>
+        <h2>
           Documentation →
-        </h3>
+        </h2>
         <p>
           Find in-depth information about Next.js features and API.
         </p>
@@ -41,9 +45,9 @@ exports[`renders homepage unchanged 1`] = `
         className="card"
         href="https://nextjs.org/learn"
       >
-        <h3>
+        <h2>
           Learn →
-        </h3>
+        </h2>
         <p>
           Learn about Next.js in an interactive course with quizzes!
         </p>
@@ -52,20 +56,20 @@ exports[`renders homepage unchanged 1`] = `
         className="card"
         href="https://github.com/vercel/next.js/tree/master/examples"
       >
-        <h3>
+        <h2>
           Examples →
-        </h3>
+        </h2>
         <p>
           Discover and deploy boilerplate example Next.js projects.
         </p>
       </a>
       <a
         className="card"
-        href="https://vercel.com/new"
+        href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
       >
-        <h3>
+        <h2>
           Deploy →
-        </h3>
+        </h2>
         <p>
           Instantly deploy your Next.js site to a public URL with Vercel.
         </p>

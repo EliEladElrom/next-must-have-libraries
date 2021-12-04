@@ -43,10 +43,10 @@ Inside the project directory run using `npm` or `yarn`:
 - `build-storybook` - build Storybook - create static Storybook project.
 - `clean-storybook` - clean static Storybook folder.
 - `test` - unit testing with Jest & react-testing-library.
+- `test:watch` - watch our jest tests.
 - `test:ci` - unit testing with Jest & react-testing-library using the ci flag.
 - `format` - will format your code prettier using opinionated settings inside `.prettierrc` file. Use `.prettierignore` to ignore files.
 - `analyze` - source-map-explorer to Analyzer Bundle.
-- `test:watch` - watch our jest tests.
 - `clean-next` - delete `.next` folder.
 - `analyze` - source-map-explorer to Analyzer Bundle.
 - `cypress:open` - create a cypress E2E directory with some examples.
@@ -88,8 +88,6 @@ npm run dev
 ## Where to go from here?
 
 - [Take the interactive d3 and React Course](https://www.udemy.com/course/integrating-d3js-with-react/?referralCode=4C1ADE35AB8633B90205)
-- [Take the Digital Course & get a 40 pages React book](https://www.udemy.com/course/getting-started-react17-with-must-have-libraries/?referralCode=3E6A9B9D8EBB48A913A9)
-- [Check out React Router and Material-UI Digital Course](https://www.udemy.com/course/master-react-17-learn-react-router-and-material-ui/?referralCode=9CB1AF4FA99DA9ADF0F4) & get 35 pages eBook.
 - [View the article on Medium](https://medium.com/react-courses/setting-up-professional-react-project-with-must-have-reactjs-libraries-2020-9358edf9acb3)
 - [Visit my site EliElrom.com](https://elielrom.com)
 - [Learning React?](https://github.com/EliEladElrom/react-tutorials)
