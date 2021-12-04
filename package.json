@@ -18,7 +18,7 @@
     "url": "https://github.com/EliEladElrom/next-must-have-libraries/issues"
   },
   "dependencies": {
-    "@svgr/webpack": "5.5.0",
+    "@svgr/webpack": "6.1.1",
     "@types/styled-components": "5.1.16",
     "next": "12.0.4",
     "next-compose-plugins": "2.2.1",
