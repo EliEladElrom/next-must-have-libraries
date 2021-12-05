@@ -55,7 +55,6 @@ Inside the project directory run using `npm` or `yarn`:
 - `prepare` - Install husky.
 - `isready` - run format, lint, test and build production, lastly run analyze.
 - `clean-next` - clean next directory.
-- `svg` - run to auto-generate TypeScript React components of SVGs from the /components/Svg/raw directory, outputted to the /components/Svg directory.
 
 Entry point `pages/index.tsx`.
 

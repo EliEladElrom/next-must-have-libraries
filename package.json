@@ -2,7 +2,7 @@
   "name": "next-must-have-libraries",
   "title": "A Professional Starter Nextjs with Must-Have Libraries (MHL)",
   "description": "A starter professional React using Nextjs",
-  "version": "0.1.001",
+  "version": "0.1.002",
   "license": "MIT",
   "author": {
     "name": "Eli Elad Elrom",
@@ -18,15 +18,14 @@
     "url": "https://github.com/EliEladElrom/next-must-have-libraries/issues"
   },
   "dependencies": {
-    "@svgr/webpack": "5.5.0",
     "@types/styled-components": "5.1.16",
-    "next": "12.0.4",
+    "next": "12.0.6",
     "next-compose-plugins": "2.2.1",
     "next-optimized-images": "2.6.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-uuid": "1.0.2",
-    "sass": "1.32.8",
+    "sass": "1.44.0",
     "styled-components": "5.3.3"
   },
   "keywords": [
@@ -43,7 +42,7 @@
     "build-storybook": "build-storybook",
     "build-and-start-storybook": "build-storybook && npm run storybook",
     "clean-storybook": "rm -rf storybook-static",
-    "test": "jest --env=jsdom --testPathIgnorePatterns test-utils.tsx cypress setupEnv.ts TemplateName.*q",
+    "test": "jest --env=jsdom --testPathIgnorePatterns test-utils.tsx cypress setupEnv.ts TemplateName.*",
     "test:watch": "jest --watch --env=jsdom --testPathIgnorePatterns test-utils.tsx cypress setupEnv.ts TemplateName.*",
     "test:ci": "jest --ci",
     "format": "prettier --write '**/*.{ts,tsx,scss,css,json}'",
@@ -53,8 +52,7 @@
     "cypress:run": "cypress run",
     "cypress:clean": "rm -rf cypress",
     "prepare": "husky install",
-    "isready": "prettier --write 'pages/**/*.{ts,tsx,scss,css,json}' && next lint && jest --env=jsdom --testPathIgnorePatterns test-utils.tsx cypress setupEnv.ts && next build && source-map-explorer .next/static/**/*.js",
-    "svg": "npx @svgr/cli --typescript --icon -d components/Svg components/Svg/raw"
+    "isready": "prettier --write 'pages/**/*.{ts,tsx,scss,css,json}' && next lint && jest --env=jsdom --testPathIgnorePatterns test-utils.tsx cypress setupEnv.ts && next build && source-map-explorer .next/static/**/*.js"
   },
   "devDependencies": {
     "@babel/core": "7.16.0",
@@ -66,11 +64,11 @@
     "@storybook/react": "6.4.7",
     "@testing-library/jest-dom": "5.14.1",
     "@testing-library/react": "12.0.0",
-    "@testing-library/user-event": "13.2.1",
+    "@testing-library/user-event": "13.5.0",
     "@types/react": "17.0.37",
     "@types/react-test-renderer": "17.0.1",
     "@typescript-eslint/eslint-plugin": "4.28.3",
-    "@typescript-eslint/parser": "5.0.0",
+    "@typescript-eslint/parser": "5.5.0",
     "babel-eslint": "10.1.0",
     "babel-jest": "27.0.6",
     "babel-loader": "8.2.3",

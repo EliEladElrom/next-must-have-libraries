@@ -1,6 +1,5 @@
 const withPlugins = require('next-compose-plugins');
 const optimizedImages = require('next-optimized-images');
-const withSvgr = require('@svgr/webpack');
 
 const nextConfiguration = {
   productionBrowserSourceMaps: true,
@@ -16,4 +15,4 @@ const nextConfiguration = {
   },
 };
 
-module.exports = withPlugins([[optimizedImages], [withSvgr]], nextConfiguration);
+module.exports = withPlugins([[optimizedImages]], nextConfiguration);
