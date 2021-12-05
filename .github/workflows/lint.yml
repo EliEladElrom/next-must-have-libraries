@@ -1,11 +1,24 @@
 name: lint
-on:
-  - push
-  - pull_request
+
+on: [push]
+
 jobs:
-  lint:
+  build:
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+
     steps:
-      - uses: actions/checkout@v2
-      - run: npm i # There is a bug with npm ci -> https://github.com/npm/cli/issues/558
-      - run: npm run lint
+      - uses: actions/checkout@v1
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: install dependencies
+        run: |
+          yarn
+      - name: run lint
+        run: |
+          yarn lint
