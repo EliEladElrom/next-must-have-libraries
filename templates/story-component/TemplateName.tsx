@@ -1,3 +1,9 @@
+/*
+Author: Eli Elad Elrom
+Website: https://EliElrom.com
+License: MIT License
+*/
+
 import styled, { css } from 'styled-components';
 
 const VARIANT_STYLES = {
