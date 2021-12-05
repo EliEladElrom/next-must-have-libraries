@@ -1,8 +1,8 @@
 {
   "name": "next-must-have-libraries",
-  "title": "A Professional Starter Nextjs with Must-Have Libraries (MHL)",
+  "title": "A Professional Starter React Nextjs with Must-Have Libraries (MHL)",
   "description": "A starter professional React using Nextjs",
-  "version": "0.1.006",
+  "version": "0.1.007",
   "license": "MIT",
   "author": {
     "name": "Eli Elad Elrom",

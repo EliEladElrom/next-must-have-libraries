@@ -1,12 +1,12 @@
 # NEXT-MHL
-## A Professional Starter Nextjs with Must-Have Libraries (MHL) 
+## A Professional Starter React Nextjs with Must-Have Libraries (MHL) 
 
 [![Build Status](https://travis-ci.org/EliEladElrom/next-must-have-libraries.svg?branch=main)](https://travis-ci.org/EliEladElrom/next-must-have-libraries)
 [![Coverage Status](https://coveralls.io/repos/github/EliEladElrom/next-must-have-libraries/badge.svg?branch=main)](https://coveralls.io/github/EliEladElrom/next-must-have-libraries?branch=main)
 ![test](https://github.com/EliEladElrom/next-must-have-libraries/workflows/test/badge.svg)
 ![lint](https://github.com/EliEladElrom/next-must-have-libraries/workflows/lint/badge.svg)
 ![CI](https://github.com/EliEladElrom/next-must-have-libraries/workflows/CI/badge.svg)
-![build](https://github.com/EliEladElrom/next-must-have-libraries/workflows/build/badge.svg)
+![Main](https://github.com/EliEladElrom/next-must-have-libraries/workflows/main/badge.svg)
 [![npm version](https://badge.fury.io/js/next-must-have-libraries.svg)](https://badge.fury.io/js/next-must-have-libraries)
 [![GitHub issues](https://img.shields.io/github/issues/EliEladElrom/next-must-have-libraries)](https://github.com/EliEladElrom/next-must-have-libraries/issues)
 [![DeepScan grade](https://deepscan.io/api/teams/11491/projects/14393/branches/266604/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=11491&pid=14393&bid=266604)
