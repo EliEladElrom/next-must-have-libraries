@@ -96,22 +96,17 @@ Example;
 npx generate-react-cli component Header --type=story
 ```
 
-Will result with the following starter components;
-
-1. src/components/Tooltip/Tooltip.tsx
-2. src/components/Tooltip/Tooltip.stories.tsx
-3. src/components/Tooltip/index.ts
+Or use the complex story;
 
 ```
 npx generate-react-cli component Header --type=complex-story
 ```
 
-Will result with the following starter components;
+Will result with the following components;
 
-1. src/components/Tooltip/Tooltip.tsx
-2. src/components/Tooltip/Tooltip.css.ts
-3. src/components/Tooltip/Tooltip.stories.tsx
-4. src/components/Tooltip/index.ts
+1. components/Header/Header.tsx
+2. components/Header/Header.stories.tsx
+3. components/Header/index.ts
 
 ## Eslint configurations
 
