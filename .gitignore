@@ -5,6 +5,9 @@ yarn-error.log
 yarn.lock
 docs
 
+# Next
+.next
+
 # IDEs
 .vscode
 .idea
