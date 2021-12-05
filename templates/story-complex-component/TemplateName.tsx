@@ -1,3 +1,9 @@
+/*
+Author: Eli Elad Elrom
+Website: https://EliElrom.com
+License: MIT License
+*/
+
 import React from 'react';
 import { TemplateNameDiv } from './TemplateName.css';
 

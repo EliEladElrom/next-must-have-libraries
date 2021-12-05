@@ -2,7 +2,7 @@
   "name": "next-must-have-libraries",
   "title": "A Professional Starter React Nextjs with Must-Have Libraries (MHL)",
   "description": "A starter professional React using Nextjs",
-  "version": "0.1.008",
+  "version": "0.1.009",
   "license": "MIT",
   "author": {
     "name": "Eli Elad Elrom",
@@ -101,15 +101,15 @@
     "cypress": "9.1.1",
     "eslint": "7.32.0",
     "eslint-config-airbnb-typescript": "16.1.0",
-    "eslint-config-next": "12.0.6",
+    "eslint-config-next": "12.0.7",
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-import": "2.25.3",
-    "eslint-plugin-jest": "24.3.6",
+    "eslint-plugin-jest": "25.3.0",
     "eslint-plugin-jest-dom": "3.9.2",
     "eslint-plugin-jsx-a11y": "6.5.1",
     "eslint-plugin-react": "7.27.1",
     "eslint-plugin-react-hooks": "4.3.0",
-    "eslint-plugin-testing-library": "4.11.0",
+    "eslint-plugin-testing-library": "5.0.1",
     "husky": "7.0.4",
     "identity-obj-proxy": "3.0.0",
     "jest": "27.4.3",
@@ -125,7 +125,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "prettier --write 'src/components/**/*.{ts,tsx,scss,css,json}' && next lint && jest --env=jsdom --testPathIgnorePatterns test-utils.tsx cypress setupEnv.ts TemplateName.*"
+      "pre-commit": "prettier --write 'components/**/*.{ts,tsx,scss,css,json}' && next lint && jest --env=jsdom --testPathIgnorePatterns test-utils.tsx cypress setupEnv.ts TemplateName.*"
     }
   }
 }
