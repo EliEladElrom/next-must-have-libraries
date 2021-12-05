@@ -23,11 +23,14 @@
 - CSS-in-JS Modules — Styled Components
 - Unit Testing - Jest + react-testing-library
 - E2E testing - Cypress
-- Test UI - React Testing Library
 - Format - Prettier
 - Git hooks - Husky
 - Useful utilities - analyzer Bundle, react-uuid (create unique Id)
 - Generate templates
+
+![alt text](https://miro.medium.com/max/1400/1*XYPQ7W7oCRGVTcFIoOq27Q.jpeg)
+
+If you want to generate HTML in the client browser check [CRA-MHL](https://github.com/EliEladElrom/cra-template-must-have-libraries)
 
 ## Run Scripts
 
@@ -54,23 +57,18 @@ Inside the project directory run using `npm` or `yarn`:
 - `isready` - run format, lint, test and build production, lastly run analyze.
 - `clean-next` - clean next directory.
 
-Entry point `pages/index.tsx`.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.tsx`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Configure Components Templates
-
-[generate-react-cli](https://github.com/arminbro/generate-react-cli) help speed up productivity in React projects, feel free to tweak rules inside the config file `generate-react-cli.json` to match your needs.
-
-## How to use
+## Usage
 
 Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
 
 ```bash
 npx create-next-app my-app -e https://github.com/EliEladElrom/next-must-have-libraries
-# or
+```
+
+Or;
+
+```bash
 yarn create next-app my-app -e https://github.com/EliEladElrom/next-must-have-libraries
 ```
 
@@ -82,13 +80,62 @@ yarn dev
 npm run dev
 ```
 
+Entry point `pages/index.tsx`.
+
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.tsx`.
+
+The `pages/api` directory mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+
+## Configure Storybook Templates
+
+[generate-react-cli](https://github.com/arminbro/generate-react-cli) help speed up productivity in React projects, feel free to tweak rules inside the config file `generate-react-cli.json` to match your needs.
+
+Example;
+
+```
+npx generate-react-cli component Header --type=story
+```
+
+Will result with the following starter components;
+
+1. src/components/Tooltip/Tooltip.tsx
+2. src/components/Tooltip/Tooltip.stories.tsx
+3. src/components/Tooltip/index.ts
+
+```
+npx generate-react-cli component Header --type=complex-story
+```
+
+Will result with the following starter components;
+
+1. src/components/Tooltip/Tooltip.tsx
+2. src/components/Tooltip/Tooltip.css.ts
+3. src/components/Tooltip/Tooltip.stories.tsx
+4. src/components/Tooltip/index.ts
+
+## Eslint configurations
+
+Lint set according to Airbnb style guide — as part of their style guide. Feel free to tweak `.eslintrc`.
+
+## Format configurations
+
+[Prettier](https://prettier.io/) is set using my opinionated settings, feel free to [tweak prettier rules](https://prettier.io/docs/en/configuration.html) inside config file `.prettierrc` to match your code style.
+
+## Analyzing the Bundle Size
+
+Use source-map-explorer (yarn add  --dev source-map-explorer);
+
+````
+$ yarn analyze
+````
+
 If you can use help with your React project or have a burning question, or an issue in your project that needs help with, I invite you to hire me as your [Coach](https://elielrom.com). My strategy is 100% results-oriented. If you want to sample how I work 1-on-1, let’s schedule a one-time deep dive [Consultation](https://elielrom.com/CoachingHourly).
 Additionally, [I will tutor you in react, javascript, typescript, mongodb, node, d3.](https://www.fiverr.com/elieladelrom/tutor-you-in-react-javascript-typescript-mongodb-node-d3) 
 
 ## Where to go from here?
 
 - [Take the interactive d3 and React Course](https://www.udemy.com/course/integrating-d3js-with-react/?referralCode=4C1ADE35AB8633B90205)
-- [View the article on Medium](https://medium.com/react-courses/setting-up-professional-react-project-with-must-have-reactjs-libraries-2020-9358edf9acb3)
+- [View the article on Medium](https://medium.com/react-courses/setting-up-an-opinionated-starter-nextjs-professional-react-17-project-with-must-have-reactjs-5c99577e3641)
 - [Visit my site EliElrom.com](https://elielrom.com)
 - [Learning React?](https://github.com/EliEladElrom/react-tutorials)
 

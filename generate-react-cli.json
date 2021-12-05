@@ -1,0 +1,40 @@
+{
+  "usesTypeScript": true,
+  "usesCssModule": false,
+  "component": {
+    "default": {
+      "path": "components",
+      "withStyle": true,
+      "withStory": true,
+      "withLazy": false,
+      "withTest": false
+    },
+    "story": {
+      "customTemplates": {
+        "component": "templates/story-component/TemplateName.tsx",
+        "story": "templates/story-component/TemplateName.stories.tsx",
+        "lazy": "templates/story-component/index.ts"
+      },
+      "path": "components",
+      "withStyle": false,
+      "withTest": false,
+      "withStory": true,
+      "withLazy": true
+    },
+    "complex-story": {
+      "customTemplates": {
+        "component": "templates/story-complex-component/TemplateName.tsx",
+        "style": "templates/story-complex-component/TemplateName.css.ts",
+        "story": "templates/story-complex-component/TemplateName.stories.tsx",
+        "lazy": "templates/story-complex-component/index.ts"
+      },
+      "path": "components",
+      "withStyle": true,
+      "withTest": false,
+      "withStory": true,
+      "withLazy": true
+    }
+  },
+  "cssPreprocessor": "css",
+  "testLibrary": "Testing Library"
+}
