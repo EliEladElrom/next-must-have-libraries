@@ -10,10 +10,11 @@ describe('Home', () => {
   it('renders a heading', () => {
     render(<Home />);
 
-    const heading = screen.getByRole('heading', {
-      name: /welcome to next\.js!/i,
+    const img = screen.getByRole('img', {
+      // @ts-ignore
+      src: /vercel\.svg!/i,
     });
 
-    expect(heading).toBeInTheDocument();
+    expect(img).toBeInTheDocument();
   });
 });
