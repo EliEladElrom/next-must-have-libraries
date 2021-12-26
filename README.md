@@ -38,7 +38,8 @@ Inside the project directory run using `npm` or `yarn`:
 
 - `dev` - runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 - `build` - builds the app for production to the `build` folder.
-- `start` - Runs the built app in production mode.
+- `start` - Runs the built app in production mode. You can add port: `"start": "next start -p 8081"`.
+- `export` - create an export static folder, default `out` folder.
 - `lint` - ESlint configured for Next. Use `.eslintrc.json` to setup & `.eslintignore` to ignore files.
 - `storybook` - To run your Storybook. Open [http://localhost:6006/](http://localhost:6006/) to view it in the browser.
 - `build-storybook` - build Storybook - create static Storybook project.
