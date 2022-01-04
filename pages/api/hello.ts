@@ -1,3 +1,9 @@
+/*
+Author: Eli Elad Elrom
+Website: https://EliElrom.com
+License: MIT License
+*/
+
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next';
 
