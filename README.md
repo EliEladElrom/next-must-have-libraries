@@ -12,10 +12,10 @@
 ## Opinionated project includes:
 
 - Initial [Next.js](https://nextjs.org/) project - bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-- NextJS v12
+- NextJS v12.x
 - React & React DOM v17
-- Type Checker - TypeScript v4.5.2
-- Storybook v6.4.7
+- Type Checker - TypeScript v4.x
+- Storybook v6.x (Webpack@5 support)
 - Lint - ESlint & Eslint-config-next
 - Mocking - Mock Service Worker
 - CSS-in-JS Modules — Styled Components

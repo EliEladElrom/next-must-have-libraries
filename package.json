@@ -2,7 +2,7 @@
   "name": "next-must-have-libraries",
   "title": "A Professional Starter React Nextjs with Must-Have Libraries (MHL)",
   "description": "A starter professional React using Nextjs",
-  "version": "1.0.001",
+  "version": "1.0.002",
   "license": "MIT",
   "author": {
     "name": "Eli Elad Elrom",
@@ -30,6 +30,7 @@
     "react-dom": "17.0.2",
     "react-uuid": "1.0.2",
     "sass": "1.45.1",
+    "storybook-addon-next-router": "3.1.1",
     "styled-components": "5.3.3"
   },
   "keywords": [
@@ -87,14 +88,16 @@
     "isready": "prettier --write 'pages/**/*.{ts,tsx,scss,css,json}' && next lint && jest --env=jsdom --testPathIgnorePatterns test-utils.tsx cypress setupEnv.ts && next build"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "12.1.0",
     "@babel/core": "7.16.5",
     "@babel/plugin-syntax-jsx": "7.16.5",
     "@babel/preset-react": "7.16.5",
-    "@storybook/addon-actions": "6.4.7",
-    "@storybook/addon-essentials": "6.4.7",
-    "@storybook/addon-links": "6.4.9",
-    "@storybook/react": "6.4.9",
+    "@next/bundle-analyzer": "12.1.0",
+    "@storybook/addon-actions": "6.5.0-alpha.45",
+    "@storybook/addon-essentials": "6.5.0-alpha.45",
+    "@storybook/addon-links": "6.5.0-alpha.45",
+    "@storybook/builder-webpack5": "6.5.0-alpha.45",
+    "@storybook/manager-webpack5": "6.5.0-alpha.45",
+    "@storybook/react": "6.5.0-alpha.45",
     "@testing-library/jest-dom": "5.16.1",
     "@testing-library/react": "12.0.0",
     "@testing-library/user-event": "13.5.0",
@@ -115,6 +118,7 @@
     "eslint-plugin-jsx-a11y": "6.5.1",
     "eslint-plugin-react": "7.27.1",
     "eslint-plugin-react-hooks": "4.3.0",
+    "eslint-plugin-storybook": "0.5.7",
     "eslint-plugin-testing-library": "5.0.6",
     "husky": "7.0.4",
     "identity-obj-proxy": "3.0.0",
@@ -124,7 +128,8 @@
     "prettier": "2.5.1",
     "react-test-renderer": "17.0.2",
     "testing-library": "0.0.2",
-    "typescript": "4.6.2"
+    "typescript": "4.6.2",
+    "webpack": "5"
   },
   "msw": {
     "workerDirectory": "public"
