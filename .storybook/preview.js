@@ -20,7 +20,7 @@ export const parameters = {
   },
   options: {
     storySort: {
-      order: ['Style Guide', 'Pages'],
+      order: ['Style Guide', 'Components', 'Pages'],
     },
   },
   nextRouter: {
