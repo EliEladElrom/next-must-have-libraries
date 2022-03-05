@@ -12,10 +12,8 @@ function MyApp({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
 }
 
-export default MyApp;
-
-// To enable password protection on lower environments replace:
-// `export default MyApp` with;
+// Enable password protection? replace default MyApp with;
+// Password is set as 'password' > see pages/api/login.ts
 
 /*
 import {withPasswordProtect} from "@storyofams/next-password-protect";
@@ -27,3 +25,5 @@ export default process.env.PUBLIC_ENVIRONMENT !== 'production'
     })
     : MyApp;
  */
+
+export default MyApp;

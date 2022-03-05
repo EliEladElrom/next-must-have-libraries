@@ -2,7 +2,7 @@
   "name": "next-must-have-libraries",
   "title": "A Professional Starter React Nextjs with Must-Have Libraries (MHL)",
   "description": "A starter professional React using Nextjs",
-  "version": "0.1.013",
+  "version": "1.0.001",
   "license": "MIT",
   "author": {
     "name": "Eli Elad Elrom",
@@ -20,7 +20,10 @@
   "dependencies": {
     "@storyofams/next-password-protect": "1.5.14",
     "@types/styled-components": "5.1.16",
-    "next": "12.0.6",
+    "imagemin-mozjpeg": "10.0.0",
+    "imagemin-optipng": "8.0.0",
+    "imagemin-svgo": "10.0.1",
+    "next": "12.1.0",
     "next-compose-plugins": "2.2.1",
     "next-optimized-images": "2.6.2",
     "react": "17.0.2",
@@ -30,9 +33,9 @@
     "styled-components": "5.3.3"
   },
   "keywords": [
-    "next",
-    "nextjs",
-    "next js",
+    "Next",
+    "Nextjs",
+    "Next js",
     "React",
     "React DOM v17",
     "Type Checker",
@@ -57,8 +60,8 @@
     "Git hooks",
     "Husky",
     "Useful utilities",
-    "analyzer Bundle",
-    "react-uuid (create unique Id)",
+    "Analyzer Bundle",
+    "React-uuid (create unique Id)",
     "Generate templates"
   ],
   "scripts": {
@@ -71,19 +74,20 @@
     "build-storybook": "build-storybook",
     "build-and-start-storybook": "build-storybook && npm run storybook",
     "clean-storybook": "rm -rf storybook-static",
-    "test": "jest --env=jsdom --testPathIgnorePatterns test-utils.tsx cypress setupEnv.ts TemplateName.*",
+    "test": "jest --env=jsdom --testPathIgnorePatterns test-utils.tsx cypress setupEnv.ts TemplateName.* -u",
     "test:watch": "jest --watch --env=jsdom --testPathIgnorePatterns test-utils.tsx cypress setupEnv.ts TemplateName.*",
     "test:ci": "jest --ci",
     "format": "prettier --write '**/*.{ts,tsx,scss,css,json}'",
-    "analyze": "next build && source-map-explorer .next/static/**/*.js",
+    "analyze": "ANALYZE=true yarn build && source-map-explorer .next/static/**/*.js",
     "clean-next": "rm -rf .next",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
     "cypress:clean": "rm -rf cypress",
     "prepare": "husky install",
-    "isready": "prettier --write 'pages/**/*.{ts,tsx,scss,css,json}' && next lint && jest --env=jsdom --testPathIgnorePatterns test-utils.tsx cypress setupEnv.ts && next build && source-map-explorer .next/static/**/*.js"
+    "isready": "prettier --write 'pages/**/*.{ts,tsx,scss,css,json}' && next lint && jest --env=jsdom --testPathIgnorePatterns test-utils.tsx cypress setupEnv.ts && next build"
   },
   "devDependencies": {
+    "@next/bundle-analyzer": "12.1.0",
     "@babel/core": "7.16.5",
     "@babel/plugin-syntax-jsx": "7.16.5",
     "@babel/preset-react": "7.16.5",
