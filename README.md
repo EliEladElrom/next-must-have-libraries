@@ -1,8 +1,6 @@
 # NEXT-MHL
 ## A Professional Starter React Nextjs with Must-Have Libraries (MHL) 
 
-[![Build Status](https://travis-ci.org/EliEladElrom/next-must-have-libraries.svg?branch=main)](https://travis-ci.org/EliEladElrom/next-must-have-libraries)
-[![Coverage Status](https://coveralls.io/repos/github/EliEladElrom/next-must-have-libraries/badge.svg?branch=main)](https://coveralls.io/github/EliEladElrom/next-must-have-libraries?branch=main)
 ![test](https://github.com/EliEladElrom/next-must-have-libraries/workflows/test/badge.svg)
 ![lint](https://github.com/EliEladElrom/next-must-have-libraries/workflows/lint/badge.svg)
 ![CI](https://github.com/EliEladElrom/next-must-have-libraries/workflows/CI/badge.svg)
