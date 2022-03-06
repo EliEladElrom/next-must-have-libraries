@@ -11,9 +11,9 @@
     },
     "story": {
       "customTemplates": {
-        "component": "templates/story-component/TemplateName.tsx",
-        "story": "templates/story-component/TemplateName.stories.tsx",
-        "lazy": "templates/story-component/index.ts"
+        "component": "devops/templates/story-component/TemplateName.tsx",
+        "story": "devops/templates/story-component/TemplateName.stories.tsx",
+        "lazy": "devops/templates/story-component/index.ts"
       },
       "path": "components",
       "withStyle": false,
@@ -23,10 +23,10 @@
     },
     "complex-story": {
       "customTemplates": {
-        "component": "templates/story-complex-component/TemplateName.tsx",
-        "style": "templates/story-complex-component/TemplateName.css.ts",
-        "story": "templates/story-complex-component/TemplateName.stories.tsx",
-        "lazy": "templates/story-complex-component/index.ts"
+        "component": "devops/templates/story-complex-component/TemplateName.tsx",
+        "style": "devops/templates/story-complex-component/TemplateName.css.ts",
+        "story": "devops/templates/story-complex-component/TemplateName.stories.tsx",
+        "lazy": "devops/templates/story-complex-component/index.ts"
       },
       "path": "components",
       "withStyle": true,

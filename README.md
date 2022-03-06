@@ -7,15 +7,15 @@
 [![npm version](https://badge.fury.io/js/next-must-have-libraries.svg)](https://badge.fury.io/js/next-must-have-libraries)
 [![GitHub issues](https://img.shields.io/github/issues/EliEladElrom/next-must-have-libraries)](https://github.com/EliEladElrom/next-must-have-libraries/issues)
 [![DeepScan grade](https://deepscan.io/api/teams/11491/projects/14393/branches/266604/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=11491&pid=14393&bid=266604)
-[![codecov](https://codecov.io/gh/EliEladElrom/next-must-have-libraries/branch/main/graph/badge.svg?token=6HEUnw0uTD)](undefined) - [Get Badges](https://medium.com/react-courses/set-an-ultimate-react-automated-dev-ci-cycle-with-husky-jest-puppeteer-github-actions-codecov-46b923c4f8e3)
+[![codecov](https://codecov.io/gh/EliEladElrom/next-must-have-libraries/branch/main/graph/badge.svg?token=6HEUnw0uTD)](undefined)
 
 ## Opinionated project includes:
 
 - Initial [Next.js](https://nextjs.org/) project - bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-- NextJS v12
+- NextJS v12.x
 - React & React DOM v17
-- Type Checker - TypeScript v4.5.2
-- Storybook v6.4.7
+- Type Checker - TypeScript v4.x
+- Storybook v6.x (Webpack@5 support)
 - Lint - ESlint & Eslint-config-next
 - Mocking - Mock Service Worker
 - CSS-in-JS Modules — Styled Components
@@ -144,4 +144,4 @@ Additionally, [I will tutor you in react, javascript, typescript, mongodb, node,
 - [Visit my site EliElrom.com](https://elielrom.com)
 - [Learning React?](https://github.com/EliEladElrom/react-tutorials)
 
-If you like this library, don't be shy to star it 🙏
+If you like this library, don't be shy to star it!
