@@ -13,7 +13,7 @@ const Template: ComponentStory<typeof Icon> = (args) => <Icon {...args} />;
 export const Default = Template.bind({});
 Default.args = {
   alt: 'icon',
-  height: 24,
-  iconFilename: 'vercel.svg',
-  width: 24,
+  width: 32,
+  height: 32,
+  iconFilename: 'vercel.svg'
 };

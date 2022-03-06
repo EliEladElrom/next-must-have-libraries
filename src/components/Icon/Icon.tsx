@@ -1,29 +1,28 @@
 import React, { AriaAttributes } from 'react';
 import Image from 'next/image';
 
-import { Wrapper } from './Icon.css';
+import { IconWrapper } from './Icon.css';
 
 export interface IconProps extends AriaAttributes {
   alt: string;
+  width: number;
   height: number;
   iconFilename: string;
   role: string;
-  width: number;
 }
 
-const Icon = ({ alt, height, iconFilename, role, width, ...other }: IconProps) => {
-  const maxValue = Math.max(height, width);
+const Icon = ({ alt, width, height, iconFilename, role, ...other }: IconProps) => {
   return (
-    <Wrapper>
+    <IconWrapper>
       <Image
         alt={alt}
-        height={maxValue}
+        width={width}
+        height={height}
         role={role}
         src={`/icons/${iconFilename}`}
-        width={maxValue}
         {...other}
       />
-    </Wrapper>
+    </IconWrapper>
   );
 };
 
