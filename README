@@ -2,7 +2,7 @@ EE: Publish & verify checklist:
 ==============================
 Publish
 2. Update 'package.json' version number
-3. yarn isready
+3. yarn isready && yarn storybook && yarn dev
 4. git add . && git commit -m ''
 5. git push
 6. npm publish (ensure $npm adduser $npm login - on SSH sudo)

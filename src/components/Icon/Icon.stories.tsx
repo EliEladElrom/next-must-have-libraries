@@ -15,5 +15,5 @@ Default.args = {
   alt: 'icon',
   width: 32,
   height: 32,
-  iconFilename: 'vercel.svg'
+  iconFilename: 'vercel.svg',
 };

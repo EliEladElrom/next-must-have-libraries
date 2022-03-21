@@ -2,7 +2,7 @@
   "name": "next-must-have-libraries",
   "title": "A Professional Starter React Nextjs with Must-Have Libraries (MHL)",
   "description": "A starter professional React using Nextjs",
-  "version": "1.0.004",
+  "version": "1.0.005",
   "license": "MIT",
   "author": {
     "name": "Eli Elad Elrom",
@@ -18,9 +18,9 @@
     "url": "https://github.com/EliEladElrom/next-must-have-libraries/issues"
   },
   "dependencies": {
-    "@babel/plugin-transform-react-display-name": "^7.16.7",
-    "@babel/plugin-transform-react-jsx-development": "^7.16.7",
-    "@babel/plugin-transform-react-pure-annotations": "^7.16.7",
+    "@babel/plugin-transform-react-display-name": "7.16.7",
+    "@babel/plugin-transform-react-jsx-development": "7.16.7",
+    "@babel/plugin-transform-react-pure-annotations": "7.16.7",
     "@next/eslint-plugin-next": "12.1.0",
     "@storyofams/next-password-protect": "1.6.0",
     "@svgr/webpack": "5.5.0",
@@ -29,7 +29,7 @@
     "@types/jest": "27.4.1",
     "@typescript-eslint/eslint-plugin": "5.13.0",
     "@typescript-eslint/parser": "5.13.0",
-    "eslint-config-airbnb-typescript": "16.1.0",
+    "eslint-config-airbnb-typescript": "16.1.3",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-import": "2.25.4",
     "eslint-plugin-jest": "26.1.1",
@@ -42,6 +42,8 @@
     "imagemin-optipng": "8.0.0",
     "imagemin-svgo": "9.0.0",
     "jest": "27.5.1",
+    "msw": "0.38.2",
+    "msw-storybook-addon": "1.6.1",
     "next": "12.0.4",
     "next-compose-plugins": "2.2.1",
     "next-optimized-images": "2.6.2",
@@ -49,6 +51,8 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-test-renderer": "17.0.2",
+    "react-uuid": "1.0.2",
+    "sharp": "0.30.2",
     "styled-components": "5.3.3"
   },
   "keywords": [
@@ -106,7 +110,7 @@
     "isready": "prettier --write 'src/components/**/*.{ts,tsx,scss,css,json}' && next lint && jest --env=jsdom --testPathIgnorePatterns test-utils.tsx cypress setupEnv.ts && next build && source-map-explorer .next/static/**/*.js"
   },
   "devDependencies": {
-    "@babel/core": "7.16.12",
+    "@babel/core": "7.17.8",
     "@babel/plugin-transform-react-jsx": "7.16.7",
     "@babel/preset-env": "7.16.11",
     "@storybook/addon-actions": "6.4.9",
@@ -115,7 +119,7 @@
     "@storybook/builder-webpack5": "6.4.9",
     "@storybook/manager-webpack5": "6.4.9",
     "@storybook/react": "6.4.9",
-    "@types/react": "17.0.14",
+    "@types/react": "17.0.40",
     "@types/styled-components": "5.1.20",
     "babel-loader": "8.2.2",
     "css-loader": "6.5.1",
@@ -124,7 +128,7 @@
     "husky": "7.0.4",
     "storybook-addon-next-router": "3.1.1",
     "typescript": "4.4.4",
-    "webpack": "5.64.2"
+    "webpack": "5.70.0"
   },
   "msw": {
     "workerDirectory": "public"
