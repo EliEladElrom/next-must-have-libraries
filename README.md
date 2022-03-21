@@ -16,6 +16,7 @@
 - React & React DOM v17
 - Type Checker - TypeScript v4.x
 - Storybook v6.x (Webpack@5 support)
+- MSW storybook-addon
 - Lint - ESlint & Eslint-config-next
 - Mocking - Mock Service Worker
 - CSS-in-JS Modules — Styled Components
@@ -26,6 +27,7 @@
 - Useful utilities - analyzer Bundle, react-uuid (create unique Id)
 - Generate templates
 - `next-password-protect` check `_app.tsx` to enable
+- Sharp library - For production Image Optimization with Next.js, the optional 'sharp' package is strongly recommended.
 
 ![alt text](https://miro.medium.com/max/1400/1*XYPQ7W7oCRGVTcFIoOq27Q.jpeg)
 
@@ -56,7 +58,6 @@ Inside the project directory run using `npm` or `yarn`:
 - `prepare` - Install husky.
 - `isready` - run format, lint, test and build production, lastly run analyze.
 - `clean-next` - clean next directory.
-
 
 ## Usage
 
