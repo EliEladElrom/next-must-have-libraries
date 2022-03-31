@@ -1,15 +1,24 @@
 Configure here:
 generate-react-cli.json
 
-Example;
-
+Story
+-----
+npx generate-react-cli component Header --type=story
 npx generate-react-cli component Header --type=story
 
-Or use the complex story;
-
+Complex story
+-------------
 npx generate-react-cli component Header --type=complex-story
 
 Will result with the following components;
 components/Header/Header.tsx
 components/Header/Header.stories.tsx
 components/Header/index.ts
+
+Widgets
+-------
+$ npx generate-react-cli component MyWidget --type=widget
+
+// d3 Widget & Chart Component
+$ npx generate-react-cli component LineChart --type=d3WidgetComponent
+$ npx generate-react-cli component LineChartWidget --type=d3Widget
