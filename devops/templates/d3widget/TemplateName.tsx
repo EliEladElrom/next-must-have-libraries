@@ -12,7 +12,7 @@ $ npx generate-react-cli component TemplateName --type=d3Widget
 import React, { useEffect, useRef, useState } from 'react';
 import * as d3 from 'd3';
 import { Types } from './types';
-import useWindowDimensions from '../../hooks/useWindowDimensions'
+import useWindowDimensions from '../../hooks/useWindowDimensions';
 
 // TODO EE: Update Chart, ChartHelper to actual component name & helper
 import Chart from '../../components/Chart/Chart';
