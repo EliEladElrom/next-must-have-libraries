@@ -9,26 +9,27 @@ $ npx generate-react-cli component TemplateName --type=d3
 
 */
 
-import React, { useState, useEffect, RefObject } from 'react'
-import * as d3 from 'd3' // yarn add d3 @types/d3
+import React, { useState, useEffect, RefObject } from 'react';
+import * as d3 from 'd3'; // yarn add d3 @types/d3
 
 const TemplateName = () /* or ( props : ITemplateNameProps ) */ => {
-  const [myState, setMyState] = useState<Boolean>(true)
-  const ref: RefObject<HTMLDivElement> = React.createRef()
+  const [myState, setMyState] = useState<Boolean>(true);
+  const ref: RefObject<HTMLDivElement> = React.createRef();
 
   useEffect(() => {
-    draw()
-  })
+    draw();
+  });
 
   const draw = () => {
-    d3.select(ref.current).append('p').text('Hello World')
+    d3.select(ref.current).append('p').text('Hello World');
     d3.select('svg')
       .append('g')
       .attr('transform', 'translate(250, 0)')
-      .append('rect').attr('width', 500)
+      .append('rect')
+      .attr('width', 500)
       .attr('height', 500)
-      .attr('fill', 'tomato')
-  }
+      .attr('fill', 'tomato');
+  };
 
   return (
     <div className="TemplateName" ref={ref}>
@@ -38,8 +39,8 @@ const TemplateName = () /* or ( props : ITemplateNameProps ) */ => {
         </g>
       </svg>
     </div>
-  )
-}
+  );
+};
 
 /*
 interface ITemplateNameProps {
@@ -47,4 +48,4 @@ interface ITemplateNameProps {
 }
 */
 
-export default TemplateName
+export default TemplateName;

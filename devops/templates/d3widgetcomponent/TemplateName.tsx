@@ -9,49 +9,51 @@ $ npx generate-react-cli component TemplateName --type=d3WidgetComponent
 
 */
 
-import React, { useEffect, useCallback, useState } from 'react'
-import * as d3 from 'd3'
-import { Types } from '../../widgets/TemplateNameWidget/types'
-import TemplateNameHelper from './TemplateNameHelper'
+import React, { useEffect, useCallback, useState } from 'react';
+import * as d3 from 'd3';
+import { Types } from '../../widgets/TemplateNameWidget/types';
+import TemplateNameHelper from './TemplateNameHelper';
 
-const TemplateName = ( props : ITemplateNameProps ) => {
+const TemplateName = (props: ITemplateNameProps) => {
+  const [loaded, setLoaded] = useState(false);
 
-  const [loaded, setLoaded] = useState(false)
-
-  const [prevHeight, setPrevHeight] = useState(props.dimensions.height)
-  const [prevWidth, setPrevWidth] = useState(props.dimensions.width)
+  const [prevHeight, setPrevHeight] = useState(props.dimensions.height);
+  const [prevWidth, setPrevWidth] = useState(props.dimensions.width);
 
   const memoizedDrawCallback = useCallback(() => {
     // d3.select('#div').selectAll('*').remove()
-  }, [])
+  }, []);
 
   const memoizedUpdateCallback = useCallback(() => {
-    const scales = TemplateNameHelper.getScales(props.data, props.dimensions.boundedWidth, props.dimensions.boundedHeight, props.propertiesNames)
-    const bounds = d3.select('#bounds')
-    const helper = new TemplateNameHelper(props.propertiesNames)
+    const scales = TemplateNameHelper.getScales(
+      props.data,
+      props.dimensions.boundedWidth,
+      props.dimensions.boundedHeight,
+      props.propertiesNames
+    );
+    const bounds = d3.select('#bounds');
+    const helper = new TemplateNameHelper(props.propertiesNames);
 
     // Chart
-    bounds
-      .select('#chart-group')
+    bounds.select('#chart-group');
 
     // Peripherals
 
     // yAxis
-    const yAxisGenerator = d3.axisLeft(scales.yScale)
+    const yAxisGenerator = d3.axisLeft(scales.yScale);
     bounds
       .select('#y-axis')
       // @ts-ignore
-      .call(yAxisGenerator)
+      .call(yAxisGenerator);
 
     // xAxis
-    const xAxisGenerator = d3.axisBottom(scales.xScale)
+    const xAxisGenerator = d3.axisBottom(scales.xScale);
     bounds
       .select('#x-axis')
       // @ts-ignore
       .call(xAxisGenerator)
-      .style('transform', `translateY(${props.dimensions.boundedHeight}px)`)
-
-  }, [props.data, props.dimensions, props.propertiesNames])
+      .style('transform', `translateY(${props.dimensions.boundedHeight}px)`);
+  }, [props.data, props.dimensions, props.propertiesNames]);
 
   /*
   // EE: changing metric?
@@ -63,47 +65,54 @@ const TemplateName = ( props : ITemplateNameProps ) => {
 
   useEffect(() => {
     if (!loaded) {
-      setLoaded(true)
-      memoizedDrawCallback()
-      memoizedUpdateCallback()
+      setLoaded(true);
+      memoizedDrawCallback();
+      memoizedUpdateCallback();
     } else {
-      memoizedUpdateCallback()
+      memoizedUpdateCallback();
     }
-  }, [loaded, memoizedDrawCallback, memoizedUpdateCallback])
+  }, [loaded, memoizedDrawCallback, memoizedUpdateCallback]);
 
   useEffect(() => {
-    const isNewHeight = prevHeight !== props.dimensions.height
-    const isNewWidth = prevWidth !== props.dimensions.width
+    const isNewHeight = prevHeight !== props.dimensions.height;
+    const isNewWidth = prevWidth !== props.dimensions.width;
     if (isNewHeight || isNewWidth) {
-      setPrevWidth(props.dimensions.height)
-      setPrevHeight(props.dimensions.width)
-      memoizedDrawCallback()
-      memoizedUpdateCallback()
+      setPrevWidth(props.dimensions.height);
+      setPrevHeight(props.dimensions.width);
+      memoizedDrawCallback();
+      memoizedUpdateCallback();
     }
-  }, [memoizedDrawCallback, memoizedUpdateCallback, prevHeight, prevWidth, props.dimensions.height, props.dimensions.width])
+  }, [
+    memoizedDrawCallback,
+    memoizedUpdateCallback,
+    prevHeight,
+    prevWidth,
+    props.dimensions.height,
+    props.dimensions.width,
+  ]);
 
   return (
     <div id="div">
       <svg id="wrapper" width={props.dimensions.width} height={props.dimensions.height}>
         <g
           id="bounds"
-          style={{ transform: `translate(${props.dimensions.margin.left}px, ${props.dimensions.margin.top}px)` }}
+          style={{
+            transform: `translate(${props.dimensions.margin.left}px, ${props.dimensions.margin.top}px)`,
+          }}
         >
-          <g
-            id="chart-group"
-          />
+          <g id="chart-group" />
           <g id="x-axis" />
           <g id="y-axis" />
         </g>
       </svg>
     </div>
-  )
-}
+  );
+};
 
 interface ITemplateNameProps {
-  dimensions: Types.Dimensions
-  data: Types.Data[]
-  propertiesNames: string[]
+  dimensions: Types.Dimensions;
+  data: Types.Data[];
+  propertiesNames: string[];
 }
 
-export default TemplateName
+export default TemplateName;
