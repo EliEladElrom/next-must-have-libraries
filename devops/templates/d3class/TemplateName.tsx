@@ -9,30 +9,34 @@ $ npx generate-react-cli component TemplateName --type=d3class
 
 */
 
-import React, { RefObject } from 'react'
-import * as d3 from 'd3' // yarn add d3 @types/d3
+import React, { RefObject } from 'react';
+import * as d3 from 'd3'; // yarn add d3 @types/d3
 
-export default class TemplateName extends React.PureComponent<ITemplateNameProps, ITemplateNameState> {
-  ref: RefObject<HTMLDivElement>
+export default class TemplateName extends React.PureComponent<
+  ITemplateNameProps,
+  ITemplateNameState
+> {
+  ref: RefObject<HTMLDivElement>;
 
   constructor(props: ITemplateNameProps) {
-    super(props)
+    super(props);
     this.state = {
       // TODO
-    }
-    this.ref = React.createRef()
+    };
+    this.ref = React.createRef();
   }
 
   componentDidMount() {
-    d3.select(this.ref.current).append('p').text('Hello World')
+    d3.select(this.ref.current).append('p').text('Hello World');
 
     // const svg = d3.select(this.myRef.current).append('svg').attr('width', 500).attr('height', 500)
     d3.select('svg')
       .append('g')
       .attr('transform', 'translate(250, 0)')
-      .append('rect').attr('width', 500)
+      .append('rect')
+      .attr('width', 500)
       .attr('height', 500)
-      .attr('fill', 'tomato')
+      .attr('fill', 'tomato');
   }
 
   render() {
@@ -44,7 +48,7 @@ export default class TemplateName extends React.PureComponent<ITemplateNameProps
           </g>
         </svg>
       </div>
-    )
+    );
   }
 }
 

@@ -8,5 +8,4 @@ Component: src/widgets/TemplateName/TemplateName.css.ts
 
 import styled from 'styled-components';
 
-export const root = styled.div`
-`;
+export const root = styled.div``;

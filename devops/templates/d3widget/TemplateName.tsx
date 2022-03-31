@@ -9,39 +9,45 @@ $ npx generate-react-cli component TemplateName --type=d3Widget
 
 */
 
-import React, { useEffect, useRef, useState } from 'react'
-import * as d3 from 'd3'
-import { Types } from './types'
-import useWindowDimensions from '../../hooks/WindowDimensions'
+import React, { useEffect, useRef, useState } from 'react';
+import * as d3 from 'd3';
+import { Types } from './types';
+import useWindowDimensions from '../../hooks/WindowDimensions';
 
 // TODO EE: Update Chart, ChartHelper to actual component name & helper
-import Chart from '../../components/Chart/Chart'
-import ChartHelper from '../../components/Chart/ChartHelper'
+import Chart from '../../components/Chart/Chart';
+import ChartHelper from '../../components/Chart/ChartHelper';
 
 const TemplateName = (props: ITemplateNameProps) => {
+  const [data, setData] = useState<Types.Data[]>([{}]);
 
-  const [data, setData] = useState<Types.Data[]>([{}])
+  const [propertiesNames] = useState(['name', 'value']);
 
-  const [propertiesNames] = useState(['name', 'value'])
+  const { width, height } = useWindowDimensions();
 
-  const { width, height } = useWindowDimensions()
-
-  const dimensions = useRef() as { current: Types.Dimensions }
-  dimensions.current = ChartHelper.getDimensions(width * 0.9, height * 0.9, 30, 50, 10, 50)
+  const dimensions = useRef() as { current: Types.Dimensions };
+  dimensions.current = ChartHelper.getDimensions(width * 0.9, height * 0.9, 30, 50, 10, 50);
 
   // resize
   useEffect(() => {
-    (dimensions as unknown as { current: Types.Dimensions }).current = ChartHelper.getDimensions(width * 0.9, height * 0.9, 30, 50, 10, 50)
+    (dimensions as unknown as { current: Types.Dimensions }).current = ChartHelper.getDimensions(
+      width * 0.9,
+      height * 0.9,
+      30,
+      50,
+      10,
+      50
+    );
     // console.log(dimensions.current)
-  }, [width, height, dimensions])
+  }, [width, height, dimensions]);
 
   const loadData = () => {
     d3.dsv(',', '/data/data.csv', (d) => {
-      return (d as unknown) as Types.Data[]
+      return d as unknown as Types.Data[];
     }).then((d) => {
-      setData((d as unknown) as Types.Data[])
-    })
-  }
+      setData(d as unknown as Types.Data[]);
+    });
+  };
 
   /*
   // EE: Load JSON
@@ -54,24 +60,27 @@ const TemplateName = (props: ITemplateNameProps) => {
   } */
 
   useEffect(() => {
-    if (data.length <= 1)
-      loadData()
-  })
+    if (data.length <= 1) loadData();
+  });
 
   return (
     <>
       {data.length > 1 ? (
         <>
           <h3>Title</h3>
-          <ChartName dimensions={dimensions.current} data={data} propertiesNames={propertiesNames} />
+          <ChartName
+            dimensions={dimensions.current}
+            data={data}
+            propertiesNames={propertiesNames}
+          />
         </>
       ) : (
         <>Loading</>
       )}
     </>
-  )
-}
-export default TemplateName
+  );
+};
+export default TemplateName;
 
 interface ITemplateNameProps {
   // TODO
