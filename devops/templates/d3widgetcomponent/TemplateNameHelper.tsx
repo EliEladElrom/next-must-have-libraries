@@ -12,15 +12,14 @@ const helper = new TemplateNameHelper(props.propertiesNames)
 
 */
 
-import * as d3 from 'd3'
-import { Types } from '../../widgets/TemplateNameWidget/types'
+import * as d3 from 'd3';
+import { Types } from '../../widgets/TemplateNameWidget/types';
 
 export default class TemplateNameHelper {
-
-  private readonly metric: string[]
+  private readonly metric: string[];
 
   constructor(metric: string[]) {
-    this.metric = metric
+    this.metric = metric;
   }
 
   // EE: if you need a date accessor;
@@ -28,12 +27,19 @@ export default class TemplateNameHelper {
   // xAccessor = (d: Types.Data) => TemplateNameHelper.dateParser(d[this.metric[0]] as string)
 
   // @ts-ignore
-  public xAccessor = (d: Types.Data) => d[this.metric[0]]
+  public xAccessor = (d: Types.Data) => d[this.metric[0]];
 
   // @ts-ignore
-  public yAccessor = (d: Types.Data) => d[this.metric[1]]
+  public yAccessor = (d: Types.Data) => d[this.metric[1]];
 
-  static getDimensions = (width: number, height: number, left: number, right: number, top: number, bottom: number) => {
+  static getDimensions = (
+    width: number,
+    height: number,
+    left: number,
+    right: number,
+    top: number,
+    bottom: number
+  ) => {
     const dimensions = {
       width,
       height,
@@ -45,15 +51,15 @@ export default class TemplateNameHelper {
       },
       boundedWidth: 0,
       boundedHeight: 0,
-    }
-    dimensions.boundedWidth = dimensions.width - dimensions.margin.left - dimensions.margin.right
-    dimensions.boundedHeight = dimensions.height - dimensions.margin.top - dimensions.margin.bottom
+    };
+    dimensions.boundedWidth = dimensions.width - dimensions.margin.left - dimensions.margin.right;
+    dimensions.boundedHeight = dimensions.height - dimensions.margin.top - dimensions.margin.bottom;
 
-    return dimensions
-  }
+    return dimensions;
+  };
 
   static getScales = (data: Types.Data[], width: number, height: number, metric: string[]) => {
-    const helper = new TemplateNameHelper(metric)
+    const helper = new TemplateNameHelper(metric);
     return {
       xScale: d3
         .scaleLinear()
@@ -64,7 +70,7 @@ export default class TemplateNameHelper {
         .scaleLinear()
         .domain(d3.extent(data, helper.yAccessor) as [number, number])
         .range([height, 0])
-        .nice()
-    }
-  }
+        .nice(),
+    };
+  };
 }
