@@ -40,23 +40,19 @@ export default class MyDocument extends Document {
     const IMAGE_TAG = process.env.NEXT_PUBLIC_IMAGE_TAG;
     const GIT_COMMIT_DATE = process.env.NEXT_PUBLIC_GIT_COMMIT_DATE;
     return (
-        <Html lang="en">
-          <Head>
-            <meta
-                property="og:title"
-                content="EliElrom.com"
-                key="title"
-            />
-          </Head>
-          <head dangerouslySetInnerHTML={{ __html: `<!-- Version:  ${VERSION} -->` }} />
-          <head dangerouslySetInnerHTML={{ __html: `<!-- Latest Commit SHA:  ${GIT_SHA} -->` }} />
-          <head dangerouslySetInnerHTML={{ __html: `<!-- Image:  ${IMAGE_TAG} -->` }} />
-          <head dangerouslySetInnerHTML={{ __html: `<!-- Timestamp:  ${GIT_COMMIT_DATE} -->` }} />
-          <body>
+      <Html lang="en">
+        <Head>
+          <meta property="og:title" content="EliElrom.com" key="title" />
+        </Head>
+        <head dangerouslySetInnerHTML={{ __html: `<!-- Version:  ${VERSION} -->` }} />
+        <head dangerouslySetInnerHTML={{ __html: `<!-- Latest Commit SHA:  ${GIT_SHA} -->` }} />
+        <head dangerouslySetInnerHTML={{ __html: `<!-- Image:  ${IMAGE_TAG} -->` }} />
+        <head dangerouslySetInnerHTML={{ __html: `<!-- Timestamp:  ${GIT_COMMIT_DATE} -->` }} />
+        <body>
           <Main />
           <NextScript />
-          </body>
-        </Html>
+        </body>
+      </Html>
     );
   }
 }
