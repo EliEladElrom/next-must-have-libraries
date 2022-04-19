@@ -31,11 +31,11 @@ const TemplateName = (props: ITemplateNameProps) => {
       props.dimensions.boundedHeight,
       props.propertiesNames
     );
-    const bounds = d3.select('#bounds');
+    const bounds = d3.select('#boundsTemplateName');
     const helper = new TemplateNameHelper(props.propertiesNames);
 
     // Chart
-    bounds.select('#chart-group');
+    bounds.select('#chart-TemplateNameGroup');
 
     // Peripherals
 
@@ -93,14 +93,14 @@ const TemplateName = (props: ITemplateNameProps) => {
 
   return (
     <div id="div">
-      <svg id="wrapper" width={props.dimensions.width} height={props.dimensions.height}>
+      <svg id="wrapperTemplateName" width={props.dimensions.width} height={props.dimensions.height}>
         <g
-          id="bounds"
+          id="boundsTemplateName"
           style={{
             transform: `translate(${props.dimensions.margin.left}px, ${props.dimensions.margin.top}px)`,
           }}
         >
-          <g id="chart-group" />
+          <g id="chart-TemplateNameGroup" />
           <g id="x-axis" />
           <g id="y-axis" />
         </g>

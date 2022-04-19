@@ -133,6 +133,10 @@ See `.env.sample` for examples:
 | Name                                                   | Description                                     |
 | ------------------------------------------------------ | ----------------------------------------------- |
 | `PUBLIC_ENVIRONMENT`                                   | Environment                                     |
+| `NEXT_PUBLIC_GIT_SHA`                                  | Git Commit SHA                                  |
+| `NEXT_PUBLIC_PUBLIC_VERSION`                           | Should be Based on `package.json` version tag   |
+| `NEXT_PUBLIC_IMAGE_TAG`                                | Docker SHA - if using one                       |
+| `NEXT_PUBLIC_GIT_COMMIT_DATE`                          | Latest commit date                              |
 
 
 If you can use help with your React project or have a burning question, or an issue in your project that needs help with, I invite you to hire me as your [Coach](https://elielrom.com). My strategy is 100% results-oriented. If you want to sample how I work 1-on-1, let’s schedule a one-time deep dive [Consultation](https://elielrom.com/CoachingHourly).

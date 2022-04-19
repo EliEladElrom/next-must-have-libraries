@@ -5,7 +5,7 @@ License: MIT License
 */
 
 import React from 'react';
-import Document, { DocumentContext } from 'next/document';
+import Document, { DocumentContext, Html, Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 
 export default class MyDocument extends Document {
@@ -32,5 +32,31 @@ export default class MyDocument extends Document {
     } finally {
       sheet.seal();
     }
+  }
+
+  render() {
+    const VERSION = process.env.NEXT_PUBLIC_VERSION;
+    const GIT_SHA = process.env.NEXT_PUBLIC_GIT_SHA;
+    const IMAGE_TAG = process.env.NEXT_PUBLIC_IMAGE_TAG;
+    const GIT_COMMIT_DATE = process.env.NEXT_PUBLIC_GIT_COMMIT_DATE;
+    return (
+        <Html lang="en">
+          <Head>
+            <meta
+                property="og:title"
+                content="EliElrom.com"
+                key="title"
+            />
+          </Head>
+          <head dangerouslySetInnerHTML={{ __html: `<!-- Version:  ${VERSION} -->` }} />
+          <head dangerouslySetInnerHTML={{ __html: `<!-- Latest Commit SHA:  ${GIT_SHA} -->` }} />
+          <head dangerouslySetInnerHTML={{ __html: `<!-- Image:  ${IMAGE_TAG} -->` }} />
+          <head dangerouslySetInnerHTML={{ __html: `<!-- Timestamp:  ${GIT_COMMIT_DATE} -->` }} />
+          <body>
+          <Main />
+          <NextScript />
+          </body>
+        </Html>
+    );
   }
 }
