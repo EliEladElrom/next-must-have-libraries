@@ -8,7 +8,7 @@ module.exports = {
   core: {
     builder: 'webpack5',
   },
-  stories: ['../**/**/*.stories.mdx', '../**/**/*.stories.@(js|jsx|ts|tsx)'],
+  stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: ['@storybook/addon-links', '@storybook/addon-essentials', 'storybook-addon-next-router'],
   webpackFinal: (config) => {
     const fileLoaderRule = config.module.rules.find((rule) => rule.test && rule.test.test('.svg'));

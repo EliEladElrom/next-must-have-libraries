@@ -43,11 +43,17 @@ export default class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <meta property="og:title" content="EliElrom.com" key="title" />
+            <script
+                dangerouslySetInnerHTML={{
+                  __html: `
+                  <!-- Version:  ${VERSION} -->
+                  <!-- Latest Commit SHA:  ${GIT_SHA} -->
+                  <!-- Image:  ${IMAGE_TAG} -->
+                  <!-- Timestamp:  ${GIT_COMMIT_DATE} -->
+                `,
+                }}
+            />
         </Head>
-        <head dangerouslySetInnerHTML={{ __html: `<!-- Version:  ${VERSION} -->` }} />
-        <head dangerouslySetInnerHTML={{ __html: `<!-- Latest Commit SHA:  ${GIT_SHA} -->` }} />
-        <head dangerouslySetInnerHTML={{ __html: `<!-- Image:  ${IMAGE_TAG} -->` }} />
-        <head dangerouslySetInnerHTML={{ __html: `<!-- Timestamp:  ${GIT_COMMIT_DATE} -->` }} />
         <body>
           <Main />
           <NextScript />
