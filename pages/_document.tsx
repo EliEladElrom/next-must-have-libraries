@@ -43,16 +43,16 @@ export default class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <meta property="og:title" content="EliElrom.com" key="title" />
-            <script
-                dangerouslySetInnerHTML={{
-                  __html: `
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
                   <!-- Version:  ${VERSION} -->
                   <!-- Latest Commit SHA:  ${GIT_SHA} -->
                   <!-- Image:  ${IMAGE_TAG} -->
                   <!-- Timestamp:  ${GIT_COMMIT_DATE} -->
                 `,
-                }}
-            />
+            }}
+          />
         </Head>
         <body>
           <Main />
