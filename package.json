@@ -113,7 +113,7 @@
   "devDependencies": {
     "@babel/core": "7.17.8",
     "@babel/plugin-transform-react-jsx": "7.16.7",
-    "@babel/preset-env": "7.16.11",
+    "@babel/preset-env": "7.17.10",
     "@storybook/addon-actions": "6.5.0-alpha.64",
     "@storybook/addon-essentials": "6.5.0-alpha.64",
     "@storybook/addon-links": "6.5.0-alpha.64",
