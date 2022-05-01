@@ -121,7 +121,7 @@
     "@storybook/manager-webpack5": "6.5.0-alpha.64",
     "@storybook/react": "6.5.0-alpha.64",
     "@types/react": "17.0.40",
-    "@types/styled-components": "5.1.24",
+    "@types/styled-components": "5.1.25",
     "babel-loader": "8.2.2",
     "css-loader": "6.5.1",
     "eslint": "<8.0.0",
