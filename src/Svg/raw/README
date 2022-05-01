@@ -1,0 +1,2 @@
+1) Place SVG in the raw folder
+2) Use the 'yarn svg' task to generate tsx version
