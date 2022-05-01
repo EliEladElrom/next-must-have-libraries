@@ -17,6 +17,7 @@ import useWindowDimensions from '../../hooks/useWindowDimensions';
 // TODO EE: Update Chart, ChartHelper to actual component name & helper
 import Chart from '../../components/Chart/Chart';
 import ChartHelper from '../../components/Chart/ChartHelper';
+import { HeaderWrapper } from './TemplateName.css';
 
 const TemplateName = (props: ITemplateNameProps) => {
   const [data, setData] = useState<Types.Data[]>([{}]);
@@ -66,14 +67,14 @@ const TemplateName = (props: ITemplateNameProps) => {
   return (
     <>
       {data.length > 1 ? (
-        <>
+        <HeaderWrapper>
           <h3>Title</h3>
           <ChartName
             dimensions={dimensions.current}
             data={data}
             propertiesNames={propertiesNames}
           />
-        </>
+        </HeaderWrapper>
       ) : (
         <>Loading</>
       )}

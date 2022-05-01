@@ -1,11 +1,11 @@
 {
   "typeRoots": ["../node_modules/@types", "../@types"],
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "./src",
     "target": "es5",
     "lib": ["es6", "dom", "dom.iterable", "esnext"],
     "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "noImplicitThis": true,
     "strictNullChecks": true,
     "allowJs": true,
@@ -20,8 +20,13 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "removeComments": false,
+    "preserveConstEnums": true,
+    "sourceMap": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "__mocks__/fileMock.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "__mocks__/fileMock.js", "src/**/**/*.ts"],
   "exclude": ["**/templates/*", "node_modules"]
 }
