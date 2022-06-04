@@ -11,6 +11,7 @@ import Head from 'next/head';
 import GlobalStyle from '../src/styles/global';
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const PageComponent = Component as any;
   return (
     <>
       <Head>
@@ -23,7 +24,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <title>next-must-have-libraries template</title>
       </Head>
 
-      <Component {...pageProps} />
+      <PageComponent {...pageProps} />
       <GlobalStyle />
     </>
   );
