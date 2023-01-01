@@ -21,7 +21,7 @@
     "@babel/plugin-transform-react-display-name": "7.16.7",
     "@babel/plugin-transform-react-jsx-development": "7.16.7",
     "@babel/plugin-transform-react-pure-annotations": "7.18.0",
-    "@next/eslint-plugin-next": "12.1.0",
+    "@next/eslint-plugin-next": "13.1.1",
     "@storyofams/next-password-protect": "1.6.0",
     "@svgr/webpack": "5.5.0",
     "@testing-library/jest-dom": "5.16.3",
