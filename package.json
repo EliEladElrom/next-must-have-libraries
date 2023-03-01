@@ -128,7 +128,7 @@
     "css-loader": "6.7.1",
     "eslint": "<8.0.0",
     "eslint-config-next": "12.1.6",
-    "eslint-plugin-storybook": "0.5.11",
+    "eslint-plugin-storybook": "0.6.11",
     "husky": "8.0.1",
     "source-map-explorer": "2.5.2",
     "storybook-addon-next-router": "4.0.0",
